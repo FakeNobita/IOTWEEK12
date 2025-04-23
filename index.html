@@ -45,6 +45,15 @@
             color: #333;
         }
 
+        .question-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 16px auto;
+            border-radius: 8px;
+        }
+
+
         .options-container {
             display: flex;
             flex-direction: column;
@@ -160,120 +169,136 @@
 const questions = [
   {
     id: 1,
-    question: "Qualitative analysis refers to the process by which numerical data is analyzed?",
-    options: ["True", "False"],
-    correctAnswer: 1,
-    explanation: "Qualitative analysis does not refer to numerical data analysis. Lecture 56@2:46."
+    question: "Which among the following is the most probable application scenario for a smart grid?",
+    options: ["Home automation", "Hospital networks", "Intelligent power plants", "Crop monitoring"],
+    correctAnswer: 2,
+    explanation: "Intelligent power plants are a primary application scenario for a smart grid. Lecture 51@4:20."
   },
   {
     id: 2,
-    question: "Which of the following data analysis technique involve the use of study of difference of variance?",
-    options: ["ARIMA", "ANOVA", "DNN", "OpenFlow"],
-    correctAnswer: 1,
-    explanation: "ANOVA is the technique that studies the difference of variance. Lecture 56@10:42 onward."
+    question: "With respect to a smart grid, which stakeholders are potentially benefitted?",
+    options: ["Energy Service providers", "Energy consumers/customers", "Both energy service providers and consumers", "Neither energy service providers nor consumers."],
+    correctAnswer: 2,
+    explanation: "Both energy service providers and consumers benefit from a smart grid. Lecture 51@13:20."
   },
   {
     id: 3,
-    question: "Given that you have an independent variable and that you want to predict the dependent variable based on the relationship between the two variables. Which among the following technique would you use?",
-    options: ["ANOVA", "ARIMA", "Regression Analysis", "Pre-analysis"],
-    correctAnswer: 2,
-    explanation: "Regression analysis is used to predict the dependent variable based on the relationship between independent and dependent variables. Lecture 56@15:13 onwards."
+    question: "It is not possible to perform load forecasting using a smart grid.",
+    options: ["True", "False"],
+    correctAnswer: 1,
+    explanation: "Load forecasting is indeed possible in a smart grid. Lecture 51@22:00."
   },
   {
     id: 4,
-    question: "With respect to AgriSens, how many logical layers are there in its architecture?",
-    options: ["Perception Layer", "Processing Layer", "Application Layer", "All of the given"],
-    correctAnswer: 3,
-    explanation: "AgriSens architecture has all the layers: Perception, Processing, and Application. Lecture 57@6:12 onward."
+    question: "With respect to the following Smart Grid architecture, which among the following is the most probable utility of the IP network?",
+    image: "https://raw.githubusercontent.com/FakeNobita/IOTWEEK9/main/Images/iotweek11q4.png",
+    options: [
+      "IP network has no utility",
+      "IP network is used to connect smart grid components globally for seamless data transfer",
+      "IP network is used for multimedia video streaming only",
+      "IP network is used to induce more congestion"
+    ],
+    correctAnswer: 1,
+    explanation: "IP network connects smart grid components globally for seamless data transfer. Lecture 51@23:00."
   },
   {
     id: 5,
-    question: "AgriSens supports real-time monitoring of soil moisture conditions and instant reporting to a dashboard.",
+    question: "Smart Home is an isolated concept and is not integrable with smart grid?",
     options: ["False", "True"],
-    correctAnswer: 1,
-    explanation: "AgriSens does support real-time monitoring and instant reporting. Lecture 57, practical AgriSens deployment."
+    correctAnswer: 0,
+    explanation: "Smart home is integrable with a smart grid. Lecture 51@28:01."
   },
   {
     id: 6,
-    question: "What is the data aggregator is also known as in the context of IoT in smart healthcare?",
-    options: ["CPU", "LPU", "APU", "PPU"],
-    correctAnswer: 1,
-    explanation: "The data aggregator in smart healthcare is known as LPU. Lecture 58@9:23."
+    question: "Which of the following is a cloud application of smart grid?",
+    options: ["Information management", "Energy management", "Security", "All of these"],
+    correctAnswer: 3,
+    explanation: "All of these are cloud applications in a smart grid. Lecture 52@21:55."
   },
   {
     id: 7,
-    question: "Fill in the blanks. The effect size for determining statistical significance is the standardized ________ difference between two groups.",
-    options: ["Median", "Mean", "Inter quartile range", "None of the above"],
-    correctAnswer: 1,
-    explanation: "Effect size is the standardized mean difference between two groups. Lecture Data Handling and Analytics- Part II @17:15."
+    question: "Which of the following is not a vulnerability of Smart Grid?",
+    options: ["Integrity", "Physical threats", "Dynamic system attacks", "None of these"],
+    correctAnswer: 3,
+    explanation: "All options are vulnerabilities of smart grids. Lecture 52@16:56."
   },
   {
     id: 8,
-    question: "Processing the sensed data on the device itself is known as __________ approach.",
-    options: ["Network based", "In-place", "Out of the place", "None of these"],
-    correctAnswer: 1,
-    explanation: "Processing data on the device itself is known as in-place approach. Lecture Activity monitoring Case Study - I @20:19."
+    question: "IIoT corresponds to which industrial revolution?",
+    options: ["1st", "2nd", "3rd", "4th"],
+    correctAnswer: 3,
+    explanation: "IIoT corresponds to the 4th industrial revolution. Lecture 53@10:00."
   },
   {
     id: 9,
-    question: "Fill in the blank. Processing the handheld activity device data with artificial intelligence can be used for ________.",
-    options: ["Fall detection", "Heart rate detection", "Vehicle detection", "All of these"],
+    question: "IIoT is inherently data intensive.",
+    options: ["Yes", "No"],
     correctAnswer: 0,
-    explanation: "AI can process handheld activity device data for fall detection. Lecture 60@11:56."
+    explanation: "IIoT is inherently data intensive due to big data analytics. Lecture 53@16:28."
   },
   {
     id: 10,
-    question: "Which of the following is an assumption of ANOVA?",
-    options: ["Homogeneity of variances", "Normally distributed response variable", "Independence of observations", "All of these"],
-    correctAnswer: 3,
-    explanation: "ANOVA assumes homogeneity of variances, normality, and independence of observations. Lecture 56 @12:30."
+    question: "Which among the following is one of the requirements and utility of IIoT?",
+    options: [
+      "Power plant interruption",
+      "Power plant virtualization",
+      "Power plant decentralization",
+      "Power plant denotification"
+    ],
+    correctAnswer: 1,
+    explanation: "Power plant virtualization is an important aspect of IIoT. Lecture 53@20:17."
   },
   {
     id: 11,
-    question: "Select the statement(s) that denote the type of ANOVA.",
-    options: [
-      "Statement I",
-      "Statement II",
-      "Statements I, II, and III",
-      "None of these"
-    ],
-    correctAnswer: 2,
-    explanation: "The types of ANOVA include One way, Two way, and K-way analysis. Lecture 56@11:57."
+    question: "Smart Grid follows which type of flow of energy?",
+    options: ["Bidirectional", "Unidirectional", "Both a and b", "Neither a nor b"],
+    correctAnswer: 0,
+    explanation: "Smart grid follows bidirectional flow of energy. Lecture 51@5:41."
   },
   {
     id: 12,
-    question: "AmbuSense is a privacy-aware system",
-    options: ["True", "False"],
-    correctAnswer: 0,
-    explanation: "AmbuSense is a privacy-aware system with patient-identity masking. Lecture 58@24:12."
+    question: "What is the Flow of data?",
+    options: [
+      "Acquisition>Generation>Storage>Analysis",
+      "Generation>Storage>Analysis>Acquisition",
+      "Generation>Acquisition>Storage>Analysis",
+      "None of these"
+    ],
+    correctAnswer: 2,
+    explanation: "The flow of data is Generation > Acquisition > Storage > Analysis. Lecture 55@19:29."
   },
   {
     id: 13,
-    question: "The two most relevant sensors directly used in agriculture are __________.",
-    options: ["Soil moisture and ECG sensor", "Soil moisture and water level sensor", "ECG sensor and water level sensor", "All of these"],
-    correctAnswer: 1,
-    explanation: "Soil moisture and water level sensors are the most relevant in agriculture. Lecture 57@13:11."
+    question: "Intelligent transport system is least likely to render which of the following connectivity?",
+    options: [
+      "Vehicle-to-vehicle connectivity",
+      "Vehicle-to-sensor connectivity",
+      "Vehicle-to-road infrastructure",
+      "Vehicle-to-home connectivity"
+    ],
+    correctAnswer: 3,
+    explanation: "ITS is least likely to render vehicle-to-home connectivity. Lecture 54@4:19."
   },
   {
     id: 14,
-    question: "Examples of dispersion measures include _______ and ______.",
-    options: ["Discrete, categorical", "Continuous, quantitative", "Discrete, quantitative", "Range, Variance"],
+    question: "Approximately around ________ of the total data available currently in the world is unstructured.",
+    options: ["20 %", "40 %", "60 %", "80%"],
     correctAnswer: 3,
-    explanation: "Examples of dispersion measures include Range and Variance. Lecture 56@13:51."
+    explanation: "80% of total data is unstructured. Lecture 55@9:23."
   },
   {
     id: 15,
-    question: "Suppose that your smartphone tilts by an angle of 15 degrees. Which among the following sensors will detect this tilt?",
-    options: ["HC-SR04", "Gyroscope", "Accelerometer", "Monometer"],
-    correctAnswer: 1,
-    explanation: "A gyroscope detects tilt. Lecture 60@3:06."
+    question: "SQL manages ________________ data.",
+    options: ["Unstructured", "Corrupt", "Structured", "Non-organized"],
+    correctAnswer: 2,
+    explanation: "SQL manages structured data. Lecture 55@8:56."
   }
 ];
 
 
 
 
-        let selectedAnswers = {};
+let selectedAnswers = {};
         let submitted = false;
 
         function createQuiz() {
@@ -285,6 +310,7 @@ const questions = [
                 
                 questionCard.innerHTML = `
                     <div class="question-text">Q${question.id}. ${question.question}</div>
+                    ${question.image ? `<img src="${question.image}" alt="Image for question ${question.id}" class="question-image">` : ''}
                     <div class="options-container">
                         ${question.options.map((option, index) => `
                             <label class="option" data-question="${question.id}" data-option="${index}">
@@ -301,6 +327,7 @@ const questions = [
                         <div class="explanation">${question.explanation}</div>
                     </div>
                 `;
+
                 
                 quizContainer.appendChild(questionCard);
             });
